@@ -1,0 +1,27 @@
+name: frontend
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.6.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # google_ml_kit: ^0.6.0
+  # camera: ^0.9.4+2 # For accessing the camera
+  # permission_handler: ^10.2.0 # For handling permissions
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+  - lib/assets/logo.png  # Path to your logo image 
+  - lib/assets/background.png # Path to your background image
+  - lib/assets/verify.png # Path to your verify image
+  - lib/assets/waiting.png # Path to your waiting image
