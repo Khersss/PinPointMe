@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/pages/user/waiting_page.dart';  // Import the WaitingPage
-
+import 'package:frontend/pages/user/Scanned/user_waiting.dart';  // Import the WaitingPage
 class UserMessagesPage extends StatefulWidget {
   @override
   _UserMessagesPageState createState() => _UserMessagesPageState();
 }
-
 class _UserMessagesPageState extends State<UserMessagesPage> {
   TextEditingController _messageController = TextEditingController();
   List<String> messages = []; // Start with an empty list of messages
@@ -26,15 +24,14 @@ class _UserMessagesPageState extends State<UserMessagesPage> {
           icon: Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () {
             // Redirect to WaitingPage when back icon is clicked
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(builder: (context) => WaitingPage()), // Replace current page with WaitingPage
-            );
+            Navigator.pop(context);
           },
         ),
-        title: Text(
-          "Rescuer Name", // Change to dynamic name if needed
-          style: TextStyle(color: Colors.white),
+        title: Container(
+          child: Text(
+            "Rescuer Name", // Change to dynamic name if needed
+            style: TextStyle(color: Colors.white),
+          ),
         ),
       ),
       body: Column(
@@ -45,7 +42,7 @@ class _UserMessagesPageState extends State<UserMessagesPage> {
               reverse: true, // To show the latest message at the bottom
               itemCount: messages.length,
               itemBuilder: (context, index) {
-                bool isSender = index % 2 == 0; // Simulate user and rescuer messages
+                bool isSender = index % 1 == 0; // Simulate user and rescuer messages
                 return _buildMessageBubble(messages[index], isSender);
               },
             ),
@@ -56,17 +53,11 @@ class _UserMessagesPageState extends State<UserMessagesPage> {
             padding: EdgeInsets.all(16.0),
             child: Row(
               children: [
-                IconButton(
-                  icon: Icon(Icons.attach_file, color: Colors.white),
-                  onPressed: () {
-                    // Handle attach file functionality
-                  },
-                ),
                 Expanded(
                   child: TextField(
                     controller: _messageController,
                     decoration: InputDecoration(
-                      hintText: "Type a message...",
+                      hintText: " Type a message...",
                       hintStyle: TextStyle(color: Colors.white),
                       border: OutlineInputBorder(
                         borderSide: BorderSide(color: Colors.white),

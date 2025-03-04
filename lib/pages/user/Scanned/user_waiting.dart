@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:frontend/pages/user/Scanned/user_markedsafe.dart';
 import 'package:frontend/pages/user/user_dashboard.dart';
 import 'package:frontend/pages/user/user_messages.dart';  // Import the UserDashboard screen
 
@@ -45,10 +46,10 @@ class _WaitingPageState extends State<WaitingPage> {
               icon: Icon(Icons.message, color: Colors.black),
               onPressed: () {
                 // Navigate to User Messages 
-                      Navigator.pushReplacement(
-                        context,
-                        MaterialPageRoute(builder: (context) => UserMessagesPage()),
-                      );
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => UserMessagesPage()),
+                );
               },
             ),
           ),
@@ -76,10 +77,10 @@ class _WaitingPageState extends State<WaitingPage> {
                   width: double.infinity,  // Makes the button fill the width
                   child: ElevatedButton(
                     onPressed: () {
-                      // Navigate to UserDashboard when "I am safe" button is pressed
+                      // Navigate to Marked Safe when "I am safe" button is pressed
                       Navigator.pushReplacement(
                         context,
-                        MaterialPageRoute(builder: (context) => UserDashboard()),
+                        MaterialPageRoute(builder: (context) => UserMarkedsafe()),
                       );
                     },
                     style: ElevatedButton.styleFrom(

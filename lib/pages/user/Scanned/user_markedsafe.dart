@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:frontend/pages/user/user_dashboard.dart';
 import 'package:frontend/pages/user/Scanned/user_waiting.dart'; // Import UserDashboard page
 
-class userverified extends StatefulWidget {
+class UserMarkedsafe extends StatefulWidget {
   @override
-  _userverifiedState createState() => _userverifiedState();
+  _UserMarkedsafeState createState() => _UserMarkedsafeState();
 }
 
-class _userverifiedState extends State<userverified> {
+class _UserMarkedsafeState extends State<UserMarkedsafe> {
   @override
   void initState() {
     super.initState();
@@ -29,7 +29,7 @@ class _userverifiedState extends State<userverified> {
           Container(
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('lib/assets/background.png'),
+                image: AssetImage('assets/background.png'),
                 fit: BoxFit.cover,
               ),
             ),
@@ -41,11 +41,11 @@ class _userverifiedState extends State<userverified> {
               children: [
                 SizedBox(height: 120),
                 Center(
-                  child: Image.asset('lib/assets/verify.png', height: 100),
+                  child: Image.asset('lib/assets/markedsafe.png', height: 180),
                 ),
                 SizedBox(height: 20),
                 Text(
-                  'Verification Complete.',
+                  'You are marked as safe.',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 24,

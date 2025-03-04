@@ -25,3 +25,6 @@ flutter:
   - lib/assets/background.png # Path to your background image
   - lib/assets/verify.png # Path to your verify image
   - lib/assets/waiting.png # Path to your waiting image
+  - lib/assets/pinpointme.png # Path to your pinpointme image
+  - lib/assets/markedsafe.png # Path to your marked safe image
+  - lib/assets/earthquake_safety_image.png # Path to your preventive image

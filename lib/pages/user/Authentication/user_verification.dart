@@ -98,7 +98,7 @@ class _userverificationState extends State<userverification> {
                   print('Verification Code: $code');
 
                    // Navigate to UserAuth page after successful verification
-                    Navigator.push(
+                    Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(builder: (context) => userverified()),
                     );

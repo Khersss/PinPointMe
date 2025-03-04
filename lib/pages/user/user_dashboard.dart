@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/pages/user/waiting_page.dart';
-import 'package:frontend/pages/user/user_messages.dart';
+import 'package:frontend/pages/user/Drawer/user_inbox.dart';
+import 'package:frontend/pages/user/Drawer/user_location_history.dart';
+import 'package:frontend/pages/user/Drawer/user_preventive.dart';
+import 'package:frontend/pages/user/Drawer/user_profile.dart';
 
 class UserDashboard extends StatefulWidget {
   @override
@@ -8,70 +10,44 @@ class UserDashboard extends StatefulWidget {
 }
 
 class _UserDashboardState extends State<UserDashboard> {
-  List<TextEditingController> _controllers =
-      List.generate(6, (index) => TextEditingController());
-  List<FocusNode> _focusNodes = List.generate(6, (index) => FocusNode());
-
-  // Define a GlobalKey for the Scaffold
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
-
-  @override
-  void dispose() {
-    _controllers.forEach((controller) => controller.dispose());
-    _focusNodes.forEach((node) => node.dispose());
-    super.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: _scaffoldKey,  // Set the key here
-      // App bar
+      key: _scaffoldKey,
       appBar: AppBar(
-        backgroundColor: Colors.transparent, // Makes the app bar transparent
-        elevation: 0, // Removes the shadow from app bar
+        backgroundColor: const Color.fromARGB(255, 25, 117, 192),
+        elevation: 0, foregroundColor: Colors.white,
         leading: IconButton(
-          icon: Icon(Icons.menu, color: Colors.black, size: 30),
+          icon: Icon(Icons.menu, color: Colors.white, size: 30),
           onPressed: () {
-            // Open the Drawer when hamburger menu is clicked
-            _scaffoldKey.currentState?.openDrawer();  // Use the GlobalKey to open the drawer
+            _scaffoldKey.currentState?.openDrawer();
           },
         ),
-        actions: [
-          IconButton(
-            icon: Icon(Icons.notifications, color: Colors.black, size: 30),
-            onPressed: () {
-              // Add functionality for notification bell
-            },
-          ),
-        ],
       ),
-      
-      // Drawer (hamburger menu options)
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
           children: <Widget>[
-            // Drawer Header
             DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.white, // You can customize this
+              child: Container(
+                decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('lib/assets/pinpointme.png'),
+                  fit: BoxFit.fitWidth,
+                ),
               ),
-              child: Image.asset(
-                'lib/assets/pinpointme.png',  // Adjust this asset path if necessary
-                height: 100,  // Increased height for logo visibility
-              ),
+              ), // Empty container as child, the image is the background
             ),
-            // Drawer Menu Items
             ListTile(
               leading: Icon(Icons.inbox),
               title: Text('Inbox'),
               onTap: () {
-                // Navigate to Messages page and close the drawer
-                Navigator.pop(context); // Close the drawer first
+                Navigator.pop(context);
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => UserMessagesPage()),
+                  MaterialPageRoute(builder: (context) => InboxPage()),
                 );
               },
             ),
@@ -79,52 +55,41 @@ class _UserDashboardState extends State<UserDashboard> {
               leading: Icon(Icons.security),
               title: Text('Preventive Measures'),
               onTap: () {
-                // Navigate to Preventive Measures page and close the drawer
-                Navigator.pop(context); // Close the drawer first
-                // You can add navigation logic for Preventive Measures here
-                // For example:
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(builder: (context) => PreventiveMeasuresPage()),
-                // );
+                Navigator.pop(context);
+                // Navigate to Preventive Measures page
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => PreventiveMeasuresPage()),
+                );
               },
             ),
             ListTile(
               leading: Icon(Icons.history),
               title: Text('Location History'),
               onTap: () {
-                // Navigate to Location History page and close the drawer
-                Navigator.pop(context); // Close the drawer first
-                // You can add navigation logic for Location History here
-                // For example:
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(builder: (context) => LocationHistoryPage()),
-                // );
+                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => UserLocationHistory()),
+                );
               },
             ),
             ListTile(
               leading: Icon(Icons.account_circle),
               title: Text('Profile'),
               onTap: () {
-                // Navigate to Profile page and close the drawer
-                Navigator.pop(context); // Close the drawer first
-                // You can add navigation logic for Profile here
-                // For example:
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(builder: (context) => ProfilePage()),
-                // );
+                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => UserProfile()), // Navigate to Profile page
+                 );
               },
             ),
           ],
         ),
       ),
-      
-      // Body content
       body: Stack(
         children: [
-          // Background image
           Container(
             decoration: BoxDecoration(
               image: DecorationImage(
