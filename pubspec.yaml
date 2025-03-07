@@ -28,3 +28,5 @@ flutter:
   - lib/assets/pinpointme.png # Path to your pinpointme image
   - lib/assets/markedsafe.png # Path to your marked safe image
   - lib/assets/earthquake_safety_image.png # Path to your preventive image
+  - lib/assets/admin_background.png # Path to your admin background image
+  - lib/assets/ppm.png # Path to your ppm image

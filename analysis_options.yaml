@@ -17,3 +17,5 @@ analyzer:
     dead_code: ignore
     deprecated_member_use: ignore
     avoid_unnecessary_containers: ignore
+    override_on_non_overriding_member: ignore
+    unused_field: ignore
