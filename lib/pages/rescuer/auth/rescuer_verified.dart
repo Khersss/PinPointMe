@@ -1,22 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/pages/user/user_dashboard/user_dashboard.dart';
-import 'package:frontend/pages/user/user_dashboard/Scanned/user_waiting.dart'; // Import UserDashboard page
+import 'package:frontend/pages/rescuer/rescuer_dashboard/pending/pending.dart';
 
-class userverified extends StatefulWidget {
+class RescuerVerified extends StatefulWidget {
   @override
-  _userverifiedState createState() => _userverifiedState();
+  _RescuerVerifiedState createState() => _RescuerVerifiedState();
 }
 
-class _userverifiedState extends State<userverified> {
+class _RescuerVerifiedState extends State<RescuerVerified> {
   @override
   void initState() {
     super.initState();
 
-    // Add a delay of 2 seconds before navigating to the UserDashboard page
+    // Add a delay of 2 seconds before navigating to the Rescuer Dashboard page
     Future.delayed(Duration(seconds: 2), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => UserDashboard()), // Navigate to UserDashboard
+        MaterialPageRoute(builder: (context) => PendingDashboard()), // Navigate to UserDashboard
       );
     });
   }

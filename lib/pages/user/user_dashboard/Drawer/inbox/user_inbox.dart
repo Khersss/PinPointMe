@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/pages/user/user_dashboard.dart';
-import 'package:frontend/pages/user/user_history_popup.dart';
-import 'package:frontend/pages/user/user_messages.dart';
+import 'package:frontend/pages/user/user_dashboard/user_dashboard.dart';
+import 'package:frontend/pages/user/user_dashboard/Drawer/user_loc_history/user_history_popup.dart';
+import 'package:frontend/pages/user/user_dashboard/Drawer/inbox/user_messages.dart';
 
 class InboxPage extends StatefulWidget {
   @override

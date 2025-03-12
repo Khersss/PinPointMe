@@ -66,7 +66,7 @@ class _AdminLoginState extends State<AdminLogin> {
                             width: 150,
                             height: 150,
                           ),
-                          SizedBox(height: 50),
+                          SizedBox(height: 30),
                         ],
                       ),
                     ),

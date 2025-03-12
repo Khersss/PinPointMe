@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/pages/user/Scanned/user_waiting.dart';  // Import the WaitingPage
+import 'package:frontend/pages/user/user_dashboard/Scanned/user_waiting.dart';  // Import the WaitingPage
 class UserMessagesPage extends StatefulWidget {
   @override
   _UserMessagesPageState createState() => _UserMessagesPageState();

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/pages/user/Authentication/user_verification.dart';
-import 'package:frontend/pages/user/Drawer/user_inbox.dart';
-import 'package:frontend/pages/user/Drawer/user_location_history.dart';
-import 'package:frontend/pages/user/Drawer/user_preventive.dart';
-import 'package:frontend/pages/user/Drawer/user_profile.dart';
-import 'package:frontend/pages/user/Scanned/user_markedsafe.dart';
-import 'package:frontend/pages/user/Scanned/user_waiting.dart';
-import 'package:frontend/pages/user/user_dashboard.dart';
-import 'package:frontend/pages/user/user_history_popup.dart';
-import 'package:frontend/pages/user/user_messages.dart';
+import 'package:frontend/pages/user/user_dashboard/Drawer/inbox/user_inbox.dart';
+import 'package:frontend/pages/user/user_dashboard/Drawer/user_loc_history/user_location_history.dart';
+import 'package:frontend/pages/user/user_dashboard/Drawer/user_preventive.dart';
+import 'package:frontend/pages/user/user_dashboard/Drawer/user_profile.dart';
+import 'package:frontend/pages/user/user_dashboard/Scanned/user_markedsafe.dart';
+import 'package:frontend/pages/user/user_dashboard/Scanned/user_waiting.dart';
+import 'package:frontend/pages/user/user_dashboard/user_dashboard.dart';
+import 'package:frontend/pages/user/user_dashboard/Drawer/user_loc_history/user_history_popup.dart';
+import 'package:frontend/pages/user/user_dashboard/Drawer/inbox/user_messages.dart';
 
 void main() {
   runApp(MyApp());

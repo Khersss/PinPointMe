@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/pages/user/Drawer/user_inbox.dart';
-import 'package:frontend/pages/user/Drawer/user_location_history.dart';
-import 'package:frontend/pages/user/Drawer/user_preventive.dart';
-import 'package:frontend/pages/user/Drawer/user_profile.dart';
+import 'package:frontend/pages/user/user_dashboard/Drawer/inbox/user_inbox.dart';
+import 'package:frontend/pages/user/user_dashboard/Drawer/user_loc_history/user_location_history.dart';
+import 'package:frontend/pages/user/user_dashboard/Drawer/user_preventive.dart';
+import 'package:frontend/pages/user/user_dashboard/Drawer/user_profile.dart';
 
 class UserDashboard extends StatefulWidget {
   @override

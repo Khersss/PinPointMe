@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/pages/user/user_dashboard.dart';
-import 'package:frontend/pages/user/Scanned/user_waiting.dart'; // Import UserDashboard page
+import 'package:frontend/pages/user/user_dashboard/user_dashboard.dart';
+import 'package:frontend/pages/user/user_dashboard/Scanned/user_waiting.dart'; // Import UserDashboard page
 
 class UserMarkedsafe extends StatefulWidget {
   @override

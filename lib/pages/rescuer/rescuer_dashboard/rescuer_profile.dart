@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/pages/user/user_dashboard.dart';
 
-class UserProfile extends StatelessWidget {
+
+class RescuerProfile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Icons.arrow_back),
+          icon: Icon(Icons.arrow_back, color: Colors.
+          black87, size: 30),
           onPressed: () {
-            Navigator.pop(context); // Go back to the previous screen 
+            Navigator.pop(context); // Go back to the previous screen  
           },
         ),
         title: Text('Me'), 
-        elevation: 0, foregroundColor: Colors.black, 
+        elevation: 0, foregroundColor: Colors.white, 
       ), 
       body: Container(
         decoration: BoxDecoration(
@@ -77,7 +78,6 @@ class UserProfile extends StatelessWidget {
           ),
         ),
       ),
-      backgroundColor: Colors.grey[100],
     );
   }
 }
